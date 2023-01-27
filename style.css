@@ -1,0 +1,300 @@
+
+.showtitle{
+  font-size:2em;
+  font-weight: bold;
+  color:#772796;
+  grid-area: d;
+  font-family: 'Raleway', sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+header{
+  background-color:#648DE5;
+  width: 100%;
+  
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+ 
+  
+}
+#search{
+  margin-top:20px;
+}
+p{
+  display:flex ;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+#lightbox {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.9); 
+  display:none;
+  
+}
+
+#message {
+   width: 50%;
+    padding:20px;
+    background-color:#D2B4DE;
+    text-align:center;
+    padding-left:50px ;
+    height: 50%;
+    /* Center the message in the lightbox */
+    position: absolute;
+    
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+#episodeimg{
+
+ position: relative;
+ top:30%;
+ max-width: 45%;
+ 
+}
+body{
+  text-align: center;
+  padding:0px;
+    margin:0px;
+    
+background-color: #17C3B2
+;
+
+
+}
+h1{
+  color: red;
+  
+  font-size: 45px;
+  font-family: 'Lobster', cursive;
+
+ 
+}
+h2{
+  margin-right: 10px;
+  color: #FFEEE2;
+  
+  font-size: 30px;
+}
+
+#main{
+  margin-top: 20px;
+ position: absolute
+ ;
+ left: 13%;
+ right:13%;
+ 
+
+
+ 
+ 
+	
+}
+.showsummary{
+
+  grid-area: c;
+  border:2px solid #772796;
+  border-radius: 10px;
+
+  text-align:left;
+  width:600px;
+  overflow-y: auto;
+  width:90%;
+  position:relative;
+  left:14%;
+
+  padding-left: 10px;
+ font-family: 'Raleway', sans-serif;
+}
+.showgenre{
+
+
+ 
+ text-align: left;
+  grid-area: b;
+  font-size: 1.2em;
+ margin-left: 10px;
+ position: relative;
+ left: 12%;
+
+}
+.showimage{
+ margin-right: 0px;
+  grid-area: a;
+  width: 250px;
+margin-left: auto;
+margin-right: auto;
+
+max-width: 50%;
+
+
+
+  
+}
+
+.showrating{
+  grid-area: e;
+display: flex;
+justify-content: center;
+font-size:1.8em;
+
+  
+  
+}
+.showepisodes{
+  margin-top: 50px;
+  grid-area: f;
+ overflow-y: scroll;
+  height: 200px;
+  border: #772796;
+  margin-bottom: 50px;
+  display: block;
+ 
+ 
+ 
+  
+ 
+}
+#button{
+  border:1px solid #772796;
+  border-radius: 15px;
+  width:100px;
+  
+}
+episode-btn{
+  width:300px;
+}
+#a{
+  background-color: #CEFF1A; /* Green */
+  
+  color:white;
+  font-weight: bold;
+
+
+  
+  text-decoration: none;
+ 
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius:30px;
+  display: block;
+  width: 80%;
+ 
+  height: 80px;
+  margin: 10px auto 0px auto;
+}
+
+  .showdiv{
+  
+    display:grid;
+  grid-template-columns: 1fr 1fr  1fr 1fr;
+   grid-template-areas: 
+   'd d d d'
+   'e e a a'
+   'b b a a'
+   'c c a a'
+   'f f f f';
+    grid-template-rows:150px 65px 130px 200px;
+    background-color:#40C9A2;
+   border-radius: 20px;
+   
+   
+    margin-bottom: 100px;
+  }
+ 
+
+  @media (max-width: 768px) {
+
+    .showdiv{
+  
+    
+      grid-template-columns: 1fr ;
+       grid-template-areas: 
+       'd '
+       'a '
+       'e '
+       'b '
+       'c '
+       'f ';
+        grid-template-rows:110px  370px 50px 150px 300px ;
+        background-color: #40C9A2;
+       border-radius: 20px;
+        
+       
+        margin-bottom: 100px;
+      }
+
+      .showsummary{
+        font-size: 1.2em;
+        
+      
+        border:2px solid #772796;
+        border-radius: 10px;
+        
+     
+        overflow-y: auto;
+        width: 80%;
+
+       position: relative
+       
+       ;
+       left:10%;
+       height: 300px;
+       
+
+       
+      }
+      .showepisodes{
+        
+       
+       overflow-y: scroll;
+        height: 500px;
+       
+        margin-bottom: 50px;
+        display: block;
+      
+       
+       
+        
+       
+      }
+     
+      .showrating{
+        display: flex;
+        justify-content: center;
+      }
+      #main{
+        margin-top: 20px;
+       position: absolute
+       ;
+       left: 4%;
+       right:4%;
+       
+      
+      
+       
+       
+        
+      }
+    #message{
+    height: 460px;
+    overflow: auto;
+    }
+  #episodeimg{
+    position: relative;
+    top:20%;
+  }
+
+
+  }
